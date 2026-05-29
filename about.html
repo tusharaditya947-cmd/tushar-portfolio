@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Tushar Aditya | About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-dark: #121212;
+            --neon-blue: #00D4FF;
+            --text-white: #ffffff;
+            --text-gray: #b0b0b0;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+        a { text-decoration: none; color: inherit; }
+        
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .logo { font-size: 24px; font-weight: 700; color: var(--neon-blue); }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--neon-blue); }
+        .nav-links a.active { color: var(--neon-blue); }
+
+        .container { padding: 150px 10% 80px; }
+        .section-title { font-size: 45px; margin-bottom: 50px; }
+        .section-title span { color: var(--neon-blue); }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 50px;
+            margin-bottom: 80px;
+        }
+        .about-img {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(45deg, #1a1a2e, #2a2a3e);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 100px;
+            border: 2px solid rgba(0,212,255,0.3);
+        }
+        .about-text p { color: var(--text-gray); font-size: 18px; margin-bottom: 20px; }
+
+        .skills-section { margin-bottom: 80px; }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .skill-card {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .skill-card h3 { margin-bottom: 15px; color: var(--neon-blue); }
+        .skill-bar { height: 8px; background: rgba(255,255,255,0.1); border-radius: 10px; }
+        .skill-progress {
+            height: 100%;
+            background: var(--neon-blue);
+            border-radius: 10px;
+            box-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        .qualification { margin-bottom: 80px; }
+        .table {
+            width: 100%;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .table th, .table td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .table th { background: rgba(0,212,255,0.1); color: var(--neon-blue); }
+
+        .tools-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .tool-tag {
+            background: rgba(255,255,255,0.1);
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .tool-tag:hover {
+            border-color: var(--neon-blue);
+            color: var(--neon-blue);
+        }
+
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .achievement-card {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .achievement-card h3 { color: var(--neon-blue); margin-bottom: 10px; }
+
+        footer { padding: 30px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+        footer p { color: var(--text-gray); }
+
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .navbar { padding: 20px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Tushar.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title">About <span>Me</span></h1>
+        
+        <div class="about-grid">
+            <div class="about-img"><img src="images/WhatsApp Image PM.jpeg" width="450" height="400" alt=""/></div>
+            <div class="about-text">
+                <h2>Mr. Tushar Aditya</h2>
+                <p style="margin-top: 15px; color: var(--text-gray);">
+                    I am Mr. Tushar Aditya, a creative Graphics Designer and Motion Graphics Artist with skills in branding, VFX, video editing and animation. I love transforming ideas into engaging visual experiences.
+                </p>
+                <p style="color: var(--text-gray);">
+                    With a passion for creativity and attention to detail, I have worked on various projects including logo design, social media branding, motion graphics, and video editing.
+                </p>
+            </div>
+        </div>
+
+        <div class="skills-section">
+            <h2 class="section-title">Technical <span>Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Graphics Design</h3>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <h3>Video Editing</h3>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <h3>Motion Graphics</h3>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <h3>VFX</h3>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <h3>2D Animation</h3>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qualification">
+            <h2 class="section-title">Academic <span>Qualification</span></h2>
+            <table class="table">
+                <tr>
+                    <th>Qualification</th>
+                    <th>Board</th>
+                    <th>Percentage</th>
+                </tr>
+                <tr>
+                    <td>12th Pass</td>
+                    <td>CBSE / UP Board</td>
+                    <td>74%</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="qualification">
+            <h2 class="section-title">Software <span>Tools</span></h2>
+            <div class="tools-grid">
+                <span class="tool-tag">Adobe Illustrator</span>
+				 <span class="tool-tag">Adobe photoshop</span>
+				 <span class="tool-tag">After Effect</span>
+				 <span class="tool-tag">Premier Pro</span>
+                <span class="tool-tag">Adobe
